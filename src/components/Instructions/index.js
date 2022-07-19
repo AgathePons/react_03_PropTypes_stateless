@@ -1,15 +1,21 @@
 // == Import
+import PropTypes from 'prop-types';
 import './instructions.scss';
 
 // == Composant
-function Instructions() {
+function Instructions({ instructions }) {
   return (
     <ul className="instructions">
-      <li className="instructions__item">faire ceci</li>
-      <li className="instructions__item">faire cela</li>
+      {
+        instructions.map((i) => <li key={i} className="instructions__item">{i}</li>)
+      }
     </ul>
   );
 }
+
+Instructions.propTypes = {
+  instructions: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+};
 
 // == Export
 export default Instructions;

@@ -1,22 +1,35 @@
 // == Import
+import PropTypes from 'prop-types';
 import './header.scss';
 
 // == Composant
-function Header() {
+function Header({
+  title,
+  thumbnail,
+  author,
+  difficulty,
+}) {
   return (
     <header className="header">
       <img
         className="header__img"
-        src="https://images.pexels.com/photos/53483/strawberries-crepe-dessert-sweet-53483.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        src={thumbnail}
         alt="Des crêpes sur une planches avec des fraises"
       />
       <div className="header__content">
-        <h1 className="header__content__title">Recette de crêpe</h1>
-        <p className="header__content__infos">John Doeuf - facile</p>
+        <h1 className="header__content__title">{title}</h1>
+        <p className="header__content__infos">{author} - {difficulty}</p>
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  thumbnail: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  difficulty: PropTypes.string.isRequired,
+};
 
 // == Export
 export default Header;

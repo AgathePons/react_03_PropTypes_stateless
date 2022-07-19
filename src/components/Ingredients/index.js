@@ -1,4 +1,5 @@
 // == Import
+import PropTypes from 'prop-types';
 import './ingredients.scss';
 
 // == Composant
@@ -14,6 +15,17 @@ function Ingredients() {
     </ul>
   );
 }
+
+/* Ingredients.propTypes = {
+  ingredients: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      quantity: PropTypes.number.isRequired,
+      unit: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+}; */
 
 // == Export
 export default Ingredients;
