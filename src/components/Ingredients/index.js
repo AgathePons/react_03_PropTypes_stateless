@@ -2,21 +2,27 @@
 import PropTypes from 'prop-types';
 import './ingredients.scss';
 
+import Ingredient from './Ingredient';
+
 // == Composant
-function Ingredients() {
+function Ingredients({ ingredients }) {
   return (
     <ul className="ingredients">
-      <li className="ingredients__item">
-        <span className="ingredients__item__quantity">350g</span> de truc
-      </li>
-      <li className="ingredients__item">
-        <span className="ingredients__item__quantity">350g</span> de truc
-      </li>
+      {
+        ingredients.map((i) => (
+          <Ingredient
+            key={i.id}
+            quantity={i.quantity}
+            unit={i.unit}
+            name={i.name}
+          />
+        ))
+      }
     </ul>
   );
 }
 
-/* Ingredients.propTypes = {
+Ingredients.propTypes = {
   ingredients: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -25,7 +31,7 @@ function Ingredients() {
       name: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-}; */
+};
 
 // == Export
 export default Ingredients;

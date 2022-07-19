@@ -17,7 +17,7 @@ function App() {
         author={data.author}
         difficulty={data.difficulty}
       />
-      <Ingredients />
+      <Ingredients ingredients={data.ingredients} />
       <Instructions instructions={data.instructions} />
     </div>
   );
