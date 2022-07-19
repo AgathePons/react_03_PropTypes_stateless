@@ -93,6 +93,6 @@ In the parent component, we have to set the props (at least props which are requ
 
 ## Keys
 
-If we have to map an arrray, we have to use `key={someUniqueID}` on each element. If we don't, React cannot know what element have been modified, so it re-render all the elements instead of render only the modified element.
-We cannot use the index of the element because if the source array has been modified, the indexes do not match anymore on the same elements.
+If we have to map an arrray, we have to use `key={someUniqueID}` on each element. If we don't, React cannot know what element have been modified, so it re-render all the elements instead of render only the modified element.  
+We cannot use the index of the element because if the source array has been modified, the indexes do not match anymore on the same elements.  
 When the data comes from a data source like a BDD, the better way is to apply the id of the element as unique key.
