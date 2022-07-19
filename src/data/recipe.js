@@ -43,7 +43,7 @@ export default {
     {
       id: 845,
       quantity: 3,
-      unit: 'cuillerées à soupe',
+      unit: 'cuilleres à soupe',
       name: 'de rhum ambré ou vieux',
     },
   ],
