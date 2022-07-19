@@ -1,0 +1,23 @@
+@use 'src/styles/vars';
+
+// ingredients
+.ingredients {
+  margin-top: 2rem;
+
+  &__item {
+    border-bottom: 1px solid vars.$grey;
+    padding: 1.25rem 2rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__quantity {
+      color: vars.$white;
+      background-color: vars.$primaryColor;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      border-radius: 5px;
+    }
+  }
+}
