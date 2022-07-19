@@ -16,6 +16,7 @@ function App() {
         title={data.title}
         author={data.author}
         difficulty={data.difficulty}
+        isVegan={false}
       />
       <Ingredients ingredients={data.ingredients} />
       <Instructions instructions={data.instructions} />
